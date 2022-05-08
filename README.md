@@ -1,8 +1,9 @@
 # Connect-classroom-rewards
+deployed app: https://connect-classroom-rewards.herokuapp.com/
 
-This application is a simple rewards app for grade school classrooms. Students are able to complete tasks to earn rewards.
+A simple rewards app for grade school classrooms. Students are able to complete tasks to earn rewards.
 
-This is a React application with Node.js and Express.js backend. 
+This is a React based SPA with Node.js and Express.js backend. 
 
 ## Features
 - earn points by completing tasks
