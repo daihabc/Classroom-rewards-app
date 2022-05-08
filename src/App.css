@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  background: rgb(108, 154, 182);
+  background: radial-gradient(
+    circle,
+    rgba(192, 222, 241, 1) 52%,
+    rgba(128, 189, 227, 0.9315571907239083) 100%
+  );
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.my__points{
+  margin-bottom: 1rem;
+  font-size: 18pt;
+}
+
+.view__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 850px;
+}
+
+.view {
+  width: 33.3%;
+}
+
+.view__title {
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  border-radius: 0.4em 0.4em 0 0;
+  font-size: 20px;
+}
+
+.view__container>.view__selected > .view__title {
+  color: rgb(36, 104, 146);
+  background: white;
+}
+
+.view > .view__title {
+  background: #eceff2;
+  color: #3a3d40;
+}
+
+.alert__container {
+  height: 3rem;
+}
+
+.alert {
+  max-width: 850px;
+  margin: auto;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.error {
+  position: absolute;
+  top: 30px;
+  left: calc(50vw - 5rem);
+  min-height: 1.5rem;
+  color: white;
+  background-color: rgba(208, 52, 44, 0.6);
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.error__close {
+  margin: 0;
+  padding: 1rem 1rem;
+  background-image: url("./x.png");
+  background-repeat: no-repeat;
+  background-color: rgba(249, 246, 246, 0);
+}
+
+.login__container {
+  position: absolute;
+  top: calc(40vh - 80px);
+  left: calc(50vw - 200px);
+  border-radius: 0.4em;
+  padding: 10px;
+  width: 400px;
+  height: 180px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+  background-color: white;
+}
+
+.login__input {
+  height: 40px;
+  width: 15rem;
+  margin-top: 35px;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 0.4em;
+  border: 1px solid #dce4ec;
+  font-size: 1.2rem;
+}
+
+.logout__container {
+  margin-bottom: 1rem;
+}
+
+.my__rewards__container {
+  width: 850px;
+  margin: auto;
+  border-radius: 0 0 0.4em 0.4em;
+  background: white;
+  padding: 25px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+}
+
+.earned__rewards__list {
+  min-height: 300px;
+  margin: 25px;
+}
+
+.used__rewards__list{
+  min-height: 300px;
+  margin: 25px;
+}
+
+.earned__rewards__use {
+  position: relative;
+  color: #4e97cd;
+  background-color: white;
+  border: 1px solid #4e97cd;
+}
+
+.todo:hover,
+.todo:focus {
+  border-radius: 0.4em;
+  background-color: rgba(211, 211, 211, 0.45);
+}
+
+.todo__list {
+  width: 850px;
+  min-height: 70vh;
+  margin: auto;
+  border-radius: 0 0 0.4em 0.4em;
+  padding: 25px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+  background: white;
+}
+
+.todo {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 2rem;
+  border-radius: 0.4em;
+  border: 5px solid rgb(246, 226, 177);
+  min-height: 100px;
+  min-width: 700px;
+}
+
+.todo__task__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.todo__list .todo--done {
+  border: 5px solid #92dabc;
+}
+
+.todo__input {
+  border-radius: 0.4em;
+  border: 1px solid #dce4ec;
+  margin-bottom: 1rem;
+  height: 40px;
+  width: 15rem;
+}
+
+.todo__point__containter {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  margin-top: -15px;
+  margin-left: 85px;
+}
+
+.todo__point {
+  padding-left: 5px;
+  font-size: medium;
+}
+
+.todo__star {
+  width: 30px;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.todo--done .todo__star {
+  display: none;
+}
+
+.todo__tick {
+  width: 30px;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.todo--unfinished .todo__tick {
+  display: none;
+}
+
+.todo__repeat {
+  margin-left: 5px;
+  color: #e37383;
+  font-size: smaller;
+  font-weight: bolder;
+}
+
+.todo__complete {
+  position: absolute;
+  top: 27.5px;
+  right: 30px;
+  color: white;
+  background-color: #4e97cd;
+}
+
+.todo__complete:disabled {
+  display: none;
+}
+
+.todo__description {
+  width: 100%;
+  text-align: left;
+  padding-left: 90px;
+  margin-bottom: 15px;
+  font-size: small;
+  color: #7f7f7f;
+}
+
+.inventories__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 850px;
+  min-height: 70vh;
+  margin: auto;
+  border-radius: 0 0 0.4em 0.4em;
+  padding-top: 15px;
+  padding-bottom: 75px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+  background: white;
+}
+
+.inventory__ticket {
+  position: relative;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 250px;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inventory__ticket:nth-child(n + 1) {
+  background-image: url("../assets/background-img1.JPG");
+}
+
+.inventory__ticket:nth-of-type(n + 2) {
+  background-image: url("../assets/background-img2.JPG");
+}
+
+.inventory__ticket:nth-of-type(n + 3) {
+  background-image: url("../assets/background-img3.JPG");
+}
+
+.inventory__ticket:nth-of-type(n + 4) {
+  background-image: url("../assets/background-img4.JPG");
+}
+
+.inventory__ticket:nth-of-type(n + 5) {
+  background-image: url("../assets/background-img5.JPG");
+}
+
+.inventory__ticket:nth-of-type(n + 6) {
+  background-image: url("../assets/background-img6.JPG");
+}
+
+.inventory__name {
+  position: relative;
+  top: 110px;
+}
+
+.inventory__point {
+  position: relative;
+  top: 130px;
+  font-size: smaller;
+}
+
+.inventory__point__amount {
+  font-size: medium;
+}
+
+.redeem {
+  position: relative;
+  color: #4e97cd;
+  background-color: white;
+  border: 1px solid #4e97cd;
+  top: 200px;
+  margin: 0;
+}
+
+button {
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem;
+  border-radius: 0.4em;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(36, 104, 146);
+  cursor: pointer;
+}
+
+input {
+  padding: 0.2rem;
+  margin: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
